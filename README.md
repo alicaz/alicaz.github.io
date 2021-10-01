@@ -1,12 +1,7 @@
-                                                        ## 👨‍💻 About
+                                                            👨‍💻 About
                                                       Pentester/Researcher
                                          Looking to understand technology on a deeper level 
                                           
-
-
-You can use the [editor on GitHub](https://github.com/alicaz/alicaz.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 Hi. I'm Aasia.
        
@@ -19,6 +14,7 @@ Hi. I'm Aasia.
            
             This websites includes some reports, write-up, and rechearch areas i have writen about during the past 2 years.
             In the Report section you will find all my writings, and my contact details on the contact section.
+
 
 ### Markdown
 
