@@ -4,17 +4,6 @@ You can use the [editor on GitHub](https://github.com/alicaz/alicaz.github.io/ed
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
 <h2>Hi. I'm Aasia.</h2>
         
         <h3>
@@ -26,6 +15,18 @@ Syntax highlighted code block
             <br />
             This websites includes some reports, write-up, and rechearch areas i have writen about during the past 2 years. <br /><br />
             In the Report section you will find all my writings, and my contact details on the contact section.
+
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
 
 1. Numbered
 2. List
