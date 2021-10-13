@@ -1,0 +1,68 @@
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+  }
+    
+    body {    
+      background-color: #242424;  
+    }
+  
+    #navbar li {
+      float: left;
+    }
+  
+    #navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    #navbar a:hover {
+      background-color: #111;
+    }
+  
+    .active {
+      background-color: #636363;
+    }
+    
+    /* Page content */
+    .content {
+      padding: 16px;
+      text-align: center;
+      color: white;
+      padding-top: 40px;
+    }
+    
+    .icon {
+        height: 25px;
+        width: 25px;
+        padding-top: 5px;
+    }
+  
+    a{
+      text-decoration: none;
+      color: white;
+      }
+  
+    a:visited{
+        text-decoration: none;
+        color: white;
+    }
+  
+    .reports {
+      list-style-type: none;
+      padding: 5px;
+    }
+  
+    .reports li{
+      padding-bottom: 7px;
+    }
