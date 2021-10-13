@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reports</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="report.html">Reports</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>HTB OSCP Prep Reports</h2>
+        
+        <ul class="reports">
+            <h3>
+                <li><a href="lame.html">Lame</a></li>
+            </h3>
+            <h3>
+                <li><a href="arctic.html">Arctic</a></li>
+            </h3>
+            <h3>
+                <li><a href="Cronos.html">Cronos</a></li>
+            </h3>
+            <h3>
+                <li><a href="lazy.html">Lazy</a></li>
+            </h3>
+            <h3>
+                <li><a href="solidstate.html">SolidSate</a></li>
+            </h3>
+            <h3>
+                <li><a href="bashed.html">Bashed</a></li>
+            </h3>
+            <h3>
+                <li><a href="valentine.html">Valentine</a></li>
+            </h3>
+            <h3>
+                <li><a href="openadmin.html">OpenAdmin</a></li>
+            </h3>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Security&Vulnerability Writings</h2>
+        
+        <ul class="reports">
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+            <h3>
+                <li><a href=""></a></li>
+            </h3>
+        </ul>
+    </div>
+</body>
+
+</html>
