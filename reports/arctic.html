@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <div>
+        <h1>Arctic WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <p>Nmap -sC -sV -Pn command will show the open ports in the system and other useful details that will <br>
+            help us understand the system better.</p>
+            <img src="imgs/arctic1">
+            <br>
+        <p>After going through all the ports, you will find that port 8500 can be accessed through the web. 
+            <br>http://10.10.10.11:85000</p>
+            <img src="imgs/arctic2">
+            <br>
+            <p>After Pressing CFIDE/administrator you will be redirected to a admin login page. Find the link<br>
+                 /CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en.<br>
+                  It will expose the hash version of the password. <br>
+                <img src="imgs/arctic3">
+                <br>
+            <p>Open console on your browser and use the following code below It will expose the hash version of the password.<br>
+                 console.log(hex_hmac_sha1(document.loginform.salt.value, '2F635F6D20E3FDE0C53075A8FB07DCEC9B03')) 
+                Open burp suit (or any other request interceptor) and send a login request, intercept it and change the cfadminPassword= section to the has from console, then forward the request. 
+            </p>
+                
+        
+    </div>
+</html>
