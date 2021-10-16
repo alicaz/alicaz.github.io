@@ -1,0 +1,41 @@
+<html>
+    <head></head>
+    <div>
+        <h1>Lazy WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <ol><li>1.	Enumeration: nmap vuln –script 10.10.10.18, gobuster ---</li>
+            <li>2.	Go to 10.10.10.18/register.php – register a new user with the name admin,<br>
+                error will show that the user already exsits, register another user with a new name,<br>
+                after the creation of the user you will be re directed to an index page which will say you are <br>
+                already logged in, , intercept the request with burp suit.</li>
+            <li>3.	There is an auth cookie which looks interesting, with changing the content of the auth.<br>
+                 I got an invalid padding error, which confirms that there is a oracle padding attack vulnerability. </li>
+            <li>4.	This padding attack can be exploited using the padbuster tool, a good explanation can be found here.</li>
+            <li>5.	Use this command to find the value behind the auth cookie <br>
+                <<< padbuster http://10.10.10.18/index.php <<value>> 8 <<-cookies auth=value>>
+                -encoding 0 plaintext user=admin >>>
+                </li>
+            <li>6.	Padbuster reveals the decrypted session value for the admin user which we can use to login to their account </li>
+            <li>Get the decrypted value and put it into the auth cookie. Wolah we have a login.</li>
+            <li>8.	Go to the webpage and press the button, you will be redirected to a mysshkeywithnamemitsos page,<br>
+                 which turns out to be a private ssh key for user mitsos.</li>
+            <li>9.	Try to login in with this command ssh -i mysshkeywithnamemitsos mitsos@10.10.10.18.<br>
+                 Wolah we are logged into the box!!!</li>
+            <li>10.	The user flag can be obtained from user.txt, next task is to privilege escalate to find the root user flag.</li>
+            <li></li>
+            <li></li>
+            <li>13.	In oder to exploit this we create a file named cat in /tmp directory, and we want to be able to execute this file. Commands</li>
+            <li>14.	export PATH.:$PATH</li>
+            <li>15.	echo “/bin/sh” > cat</li>
+            <li>16.	chmod 777 cat </li>
+            <li>17.	./backup</li>
+            <li>18.	Id/whoami commands will show that you are the root now </li>
+            <li>19.	ls, then access the root.txt file which contains the root flag </li>
+            <li>20.	and with that we now own this machine!!!! Happy Hacking!!</li>
+        </ol> 
+
+                
+        
+    </div>
+</html>

