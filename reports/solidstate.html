@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <div>
+        <h1>SolidSate WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <ol><li>Nmap -sC -sV -Pn 10.10.10.51</li>
+            <li>gobuster dir -u http://10.10.10.51/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt,bak,tar,zip,html -k -t 50</li>
+            <li>https://www.exploit-db.com/exploits/35513</li>
+            <li>Nc 10.10.10.51 4555</li>
+            <li>Finding mindy ssh password??/getting it sent to me??</li>
+            <li>ssh mindy@10.10.10.51 -t "bash --noprofile"</li>
+            <li>P@55W0rd1!2@</li>
+            <p>///</p>
+        </ol>
+        <ol>
+            <li>Nmap 10.10.10.51</li>
+            <li>telnet 10.10.10.51 110<li>
+            <li>ssh mindy@10.10.10.51 ‘bash –noprofile’</li>
+        </ol> 
+
+    </div>
+</html>

